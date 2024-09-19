@@ -1,6 +1,6 @@
 ---
 - name: Update package cache & dist-upgrade packages
-  apt:
+  ansible.builtin.apt:
     upgrade: "{{ apt_upgrade }}"
     update_cache: yes
     cache_valid_time: 3600
@@ -8,7 +8,7 @@
     autoclean: true
 
 - name: Clean apt.
-  apt:
+  ansible.builtin.apt:
     autoclean: yes
 
 - name: Clean apt-get.
@@ -18,5 +18,5 @@
     - skip_ansible_lint
 
 - name: Update package cache after upgrade.
-  apt:
+  ansible.builtin.apt:
     update_cache: yes
