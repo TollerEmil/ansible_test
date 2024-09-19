@@ -3,4 +3,4 @@
 - name:
     ansible.builtin.apt:
       name: "*"
-      state: latest
+        state: latest
