@@ -1,6 +1,22 @@
-name: Update and upgrade apt packages
-  become: true
-    apt:
-      upgrade: yes
-      update_cache: yes
-      cache_valid_time: 86400 #One day
+---
+- name: Update package cache & dist-upgrade packages
+  apt:
+    upgrade: "{{ apt_upgrade }}"
+    update_cache: yes
+    cache_valid_time: 3600
+    force_apt_get: true
+    autoclean: true
+
+- name: Clean apt.
+  apt:
+    autoclean: yes
+
+- name: Clean apt-get.
+  command: apt-get clean
+  changed_when: false
+  tags:
+    - skip_ansible_lint
+
+- name: Update package cache after upgrade.
+  apt:
+    update_cache: yes
