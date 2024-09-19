@@ -1,6 +1,7 @@
 ---
 - name: Update package cache & dist-upgrade packages
-  apt:
+tasks:
+  - apt:
     upgrade: "{{ apt_upgrade }}"
     update_cache: yes
     cache_valid_time: 3600
