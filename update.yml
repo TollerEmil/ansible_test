@@ -1,6 +1,5 @@
 ---
 - hosts: all
--     name:
         ansible.builtin.apt:
-          name: '*'
-          state: latest
+                name: '*'
+                state: latest
