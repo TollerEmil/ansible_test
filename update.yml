@@ -1,5 +1,4 @@
----
-- hosts: all
-  become: true
-  tasks:
-    - shell: apt-get upgrade -y; apt-get update
+- name: Update all packages to their latest version
+  ansible.builtin.apt:
+    name: "*"
+    state: latest
