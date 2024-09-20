@@ -2,6 +2,7 @@
 - name: Update Linux host
   hosts: all
   become: true
+  become_method: sudo
   tasks:
     - name: Get all updates
       ansible.builtin.apt:
