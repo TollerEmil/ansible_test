@@ -10,5 +10,5 @@
         autoclean: true
     - name: Upgrade all packages on servers
       ansible.builtin.apt:
-      name: "*"
-      state: latest
+        name: "*"
+        state: latest
