@@ -3,13 +3,13 @@
   hosts: all
   become: true
   become_method: sudo
-  lock_timeout: 180
   tasks:
     - name: Get all updates
       ansible.builtin.apt:
         update_cache: true
         autoremove: true
         autoclean: true
+        lock_timeout: 180
     - name: Upgrade all packages on servers
       ansible.builtin.apt:
         name: "*"
