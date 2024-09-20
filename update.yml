@@ -3,6 +3,7 @@
   hosts: all
   become: true
   become_method: sudo
+  lock_timeout: 180
   tasks:
     - name: Get all updates
       ansible.builtin.apt:
