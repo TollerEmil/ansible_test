@@ -5,7 +5,7 @@
 
   tasks:
     - name: Get all updates
-      ansible.builtin.apt:
-      update_cache: true
-      autoremove: true
-      autoclean: true
+        ansible.builtin.apt:
+          update_cache: true
+          autoremove: true
+          autoclean: true
