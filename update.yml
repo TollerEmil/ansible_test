@@ -8,5 +8,5 @@
     - name: Test upgrade
       shell: sudo apt-get upgrade -y
     - name: Test autoremove
-      shell: sudo apt-get autremove -y
+      shell: sudo apt-get autoremove -y
 
