@@ -1,6 +1,7 @@
 ---
 - name: Update Linux host
   hosts: all
+  serial: 1
   become: true  
 
   tasks:
