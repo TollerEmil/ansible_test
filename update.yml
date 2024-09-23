@@ -1,7 +1,7 @@
 ---
 - name: Update Linux host
   hosts: all
-  
+  become: yes  
 
   tasks:
     - name: Get all updates
@@ -9,4 +9,3 @@
         update_cache: true
         autoremove: true
         autoclean: true
-        become: yes
