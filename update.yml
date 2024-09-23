@@ -2,8 +2,9 @@
 - name: Update Linux host
   hosts: all
   serial: 1
-  become: true  
-
+  become: true
+  become_method: sudo
+  become_flags: '-H'
   tasks:
     - name: Get all updates
       ansible.builtin.apt:
