@@ -9,8 +9,3 @@
       update_cache: true
       autoremove: true
       autoclean: true
-
-    - name: Upgrade all packages on servers
-      ansible.builtin.apt:
-    - name: "*"
-      state: latest
