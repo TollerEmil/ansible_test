@@ -8,4 +8,4 @@
     - name: Test update_cache
       shell: sudo apt-get update
     - name: Test upgrade
-      shell: sudo apt-get upgrade
+      shell: sudo apt-get upgrade -y
