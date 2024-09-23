@@ -6,5 +6,5 @@
   tasks:
 
     - name: Test update_cache
-      shell: apt-get update
+      shell: sudo apt-get update
       become: true
