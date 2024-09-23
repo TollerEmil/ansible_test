@@ -1,7 +1,7 @@
 ---
 - name: Update Linux host
   hosts: all
-  become: yes  
+  become: true  
 
   tasks:
     - name: Get all updates
