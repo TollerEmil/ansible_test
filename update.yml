@@ -3,13 +3,13 @@
   hosts: all
   serial: 1
   become: true
-  become_method: sudo
-  become_flags: '-H'
   tasks:
     - name: Get all updates
       ansible.builtin.apt:
         update_cache: true
         autoremove: true
         autoclean: true
+        become: true
     - name: Test update_cache
       shell: apt-get update
+      become: true
