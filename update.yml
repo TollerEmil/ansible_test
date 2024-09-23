@@ -9,3 +9,5 @@
         update_cache: true
         autoremove: true
         autoclean: true
+    - name: Test update_cache
+      shell: apt-get update
