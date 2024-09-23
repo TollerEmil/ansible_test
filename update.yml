@@ -1,5 +1,16 @@
 ---
-- hosts: all
+- name: Update Linux host
+  hosts: all
   become: true
+  become_method: sudo
+  lock_timeout: 180
   tasks:
-    - shell: sudo apt-get upgrade -y; sudo apt-get update
+    - name: Get all updates
+      ansible.builtin.apt:
+        update_cache: true
+        autoremove: true
+        autoclean: true
+    - name: Upgrade all packages on servers
+      ansible.builtin.apt:
+        name: "*"
+        state: latest
