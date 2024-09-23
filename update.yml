@@ -9,7 +9,6 @@
         update_cache: true
         autoremove: true
         autoclean: true
-        become: true
     - name: Test update_cache
       shell: apt-get update
       become: true
