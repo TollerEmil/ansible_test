@@ -4,4 +4,4 @@
   become: true
   tasks:
     - name: Test update_cache
-      shell: sudo ./opt/management/create_user.sh
+      shell: sudo bash /opt/management/create_user.sh
