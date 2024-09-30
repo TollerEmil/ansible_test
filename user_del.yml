@@ -1,0 +1,7 @@
+---
+- name: Create User
+  hosts: all
+  become: true
+  tasks:
+    - name: Test update_cache
+      shell: sudo bash /opt/management/delete_user.sh
