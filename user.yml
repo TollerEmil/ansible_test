@@ -1,0 +1,7 @@
+---
+- name: Create User
+  hosts: all
+  become: true
+  tasks:
+    - name: Test update_cache
+      shell: sudo ./opt/management/create_user.sh
